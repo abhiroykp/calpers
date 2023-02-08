@@ -20,9 +20,8 @@ function wrapElements() {
 
     // wrap all the rest p tags inside a div using jquery
     let ele1  = $( ".custom-footer > div > p" ).wrapAll( "<div class='footer-desc' />");
-    console.log($( ".custom-footer > div > p" ))
 
-  }, 2000);
+  }, 1000);
 
 }
 
