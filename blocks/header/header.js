@@ -85,6 +85,31 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function wrapElements() {
+  setTimeout(() => {
+    let ele  = document.querySelector('header nav .nav-signin p').children;
+
+    // element that will be wrapped
+    var el = ele[0];
+
+    // create wrapper container
+    var wrapper = document.createElement('div')
+    wrapper.classList.add('signin-left');
+
+    // insert wrapper before el in the DOM tree
+    el.parentNode.insertBefore(wrapper, el);
+
+    // move el into wrapper
+    wrapper.appendChild(el);
+
+
+    // wrap all the rest a tags inside a div using jquery
+    let ele1  = $( "header nav .nav-signin p > a" ).wrapAll( "<div class='signin-right' />");
+
+  }, 1000);
+
+}
+
 /**
  * decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -105,7 +130,7 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = ['brand', 'sections', 'tools'];
+    const classes = ['signin','brand', 'sections', 'tools'];
     classes.forEach((c, i) => {
       const section = nav.children[i];
       if (section) section.classList.add(`nav-${c}`);
@@ -138,7 +163,8 @@ export default async function decorate(block) {
     toggleMenu(nav, navSections, MQ.matches);
     MQ.addEventListener('change', () => toggleMenu(nav, navSections, MQ.matches));
 
-    decorateIcons(nav);
+    await decorateIcons(nav);
+    wrapElements();
     block.append(nav);
   }
 }
