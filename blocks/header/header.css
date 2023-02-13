@@ -1,3 +1,6 @@
+header .header-wrapper {
+  height: unset !important;
+}
 /* header and nav layout */
 header nav {
   box-sizing: border-box;
