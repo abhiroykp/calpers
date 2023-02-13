@@ -101,7 +101,6 @@ main
   .cards .cards-card-body > .button-container:first-child > a {
     font-size: 1.9rem;
     font-weight: normal;
-    letter-spacing: 0.8px;
   }
 
   .cards .cards-card-body > .button-container:last-child > a {
