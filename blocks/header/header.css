@@ -70,7 +70,7 @@ header nav[aria-expanded=true] {
     color: white;
     text-decoration: underline;
 
-    padding: 0 264px;
+    padding: 0 212px;
   }
 
   header nav .nav-signin p .signin-right {
@@ -80,22 +80,33 @@ header nav[aria-expanded=true] {
     gap: 15px;
   }
 
+  header nav .nav-signin p .signin-right > a:first-child { 
+    border-right: 1.2px solid #b7e3fd;
+    padding-right: 1rem;
+  }
+
   header nav .nav-sections {
     grid-row-start: 3 !important;
     grid-row-end: 4 !important;
     grid-column-start: 1 !important;
     grid-column-end: 6 !important;
 
+    width: 100vw;
     background-color: #016AA5 !important;
   }
 
   header nav .nav-sections > ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 0 !important;
-    padding: 0 264px !important;
-    max-width: calc(100% - 100px);
+
+    padding: 0 215px !important;
+  }
+
+  header nav .nav-sections > ul > li {
+    flex: 1 !important;
+    text-align: center;
   }
 
   header nav .nav-sections > ul > li:hover {
@@ -154,8 +165,14 @@ header nav[aria-expanded=true] {
     grid-row-end: 3 !important;
     grid-column-start: 1 !important;
 
-    padding: 20px 0 20px 264px;
+    padding: 22.5px 0 22.5px 212px;
     background-color: #fff;
+  }
+
+  header nav .nav-brand p span {
+    border-right: 1.2px solid #000;
+    padding: 0.3rem;
+    margin-right: 1rem;
   }
 
   header nav .nav-brand p span svg {
@@ -166,8 +183,9 @@ header nav[aria-expanded=true] {
   }
 
   header nav .nav-brand p picture img {
-    height: 34px;
     width: auto;
+    height: 34px;
+    margin-bottom: -0.4rem;
   }
 
   header nav .nav-tools {
@@ -176,18 +194,34 @@ header nav[aria-expanded=true] {
     grid-column-end: 6 !important;
 
     background-color: #fff;
-    padding: 17px 264px 17px 0;
+    padding: 19px 212px 19px 0;
 
     
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
 
+  header nav .nav-tools > p {
+    position: relative;
+  }
+
+  header nav .nav-tools > p > span {
+    position: absolute;
+    left: 4%;
+    top: 19%;
+  }
+
+  header nav .nav-tools > p > input {
+    color: #016AA5;
+    font-size: 1rem;
+    padding: 0.6rem 2rem 0.6rem 3rem;
+    border: 1px solid #0369A4;
   }
 
   header nav .nav-tools p span svg {
     filter: invert(16%) sepia(93%) saturate(1327%) hue-rotate(186deg) brightness(97%) contrast(103%);
-    height: 40px;
+    height: 25px;
     width: auto;
   }
 }

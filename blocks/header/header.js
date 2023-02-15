@@ -106,6 +106,10 @@ function wrapElements() {
     // wrap all the rest a tags inside a div using jquery
     let ele1  = $( "header nav .nav-signin p > a" ).wrapAll( "<div class='signin-right' />");
 
+
+    let insertedSearchInput = "<input type='text' placeholder='Search' />";
+    $(insertedSearchInput).insertAfter( "header nav .nav-tools > p > span" );
+
   }, 1000);
 
 }
