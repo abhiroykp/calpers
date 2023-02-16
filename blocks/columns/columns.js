@@ -2,6 +2,8 @@ export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
+  $("main > div:nth-child(2)").remove();
+
   $(".columns.block.columns-2-cols > div").addClass("custom-column");
 
   $("<div class='customHeroBox'></div>").insertAfter( ".columns.block.columns-2-cols > div > div:first-of-type > h3 ");

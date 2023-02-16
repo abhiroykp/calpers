@@ -2,27 +2,13 @@ import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
 
 function wrapElements() {
   setTimeout(() => {
-    let ele  = document.querySelector('.custom-footer > div').children;
-
-    // element that will be wrapped
-    var el = ele[0];
-
-    // create wrapper container
-    var wrapper = document.createElement('div')
-    wrapper.classList.add('footer-logo');
-
-    // insert wrapper before el in the DOM tree
-    el.parentNode.insertBefore(wrapper, el);
-
-    // move el into wrapper
-    wrapper.appendChild(el);
-
-
-    // wrap all the rest p tags inside a div using jquery
-    let ele1  = $( ".custom-footer > div > p" ).wrapAll( "<div class='footer-desc' />");
-
+    $('.custom-footer > div > p:first-child').wrapAll('<div class="footer-covid19"></div>'); 
+    $('.custom-footer > div > p:nth-child(2)').wrapAll('<div class="footer-calpersHeading"></div>'); 
+    $('.custom-footer > div > p:nth-child(3)').wrapAll('<div class="footer-logo"></div>'); 
+    $('.custom-footer > div > p:nth-child(4), .custom-footer > div > p:nth-child(5), .custom-footer > div > p:nth-child(6), .custom-footer > div > p:nth-child(7)').wrapAll('<div class="footer-desc"></div>'); 
+    $('.custom-footer > div > p:first-child, .custom-footer > div > .footer-logo, .custom-footer > div > p:first-child, .custom-footer > div > .footer-desc').wrapAll('<div class="footer-bottom"></div>'); 
+    $('.custom-footer > div > .footer-bottom').wrapAll('<div class="footer-bottom-parent"></div>'); 
   }, 1000);
-
 }
 
 /**
