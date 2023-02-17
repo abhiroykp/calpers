@@ -162,7 +162,7 @@ header nav[aria-expanded=true] {
     grid-row-end: 3 !important;
     grid-column-start: 1 !important;
 
-    padding: 22.5px 0 22.5px 212px;
+    padding: 30px 0 30px 212px;
     background-color: #fff;
   }
 
@@ -191,7 +191,7 @@ header nav[aria-expanded=true] {
     grid-column-end: 6 !important;
 
     background-color: #fff;
-    padding: 19px 212px 19px 0;
+    padding: 26.5px 212px 26.5px 0;
 
     
     display: flex;
